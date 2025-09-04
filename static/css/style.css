@@ -4,6 +4,7 @@ nav {
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
+  background-color: #fff;
 }
 
 nav a {
@@ -42,6 +43,8 @@ nav h1 {
 
 nav div {
   text-align: right;
+  border-radius: 4 px;
+  border-color: #024950;
 }
 
 nav button {
@@ -65,13 +68,15 @@ nav button {
   align-items: center;
   margin: auto;
   padding: 1rem 0;
+  background-color: #024950;
+  width: 100vw;
 }
 
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 17rem;
+  width: 100%;
   background: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
@@ -129,3 +134,7 @@ nav button {
   text-justify: inter-word;
 }
 
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
