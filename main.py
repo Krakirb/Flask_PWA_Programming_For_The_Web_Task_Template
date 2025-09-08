@@ -5,11 +5,13 @@ import database_manager as dbHandler
 
 app = Flask(__name__)
 
+
 @app.route('/index.html', methods=['GET'])
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    data = dbHandler.listExtension()
+    data = dbHandler.listListing()
     return render_template('/index.html', content=data)
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
