@@ -60,9 +60,10 @@ nav button {
   margin-right: 8px;
 }
 
-section {
-  border-top: 8 px;
-  background-color: #024950;
+body {
+  margin-top: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 section h2 {
@@ -147,4 +148,11 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   margin-top: 8 px;
+}
+
+.search {
+  background-color: #024950;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
 }
