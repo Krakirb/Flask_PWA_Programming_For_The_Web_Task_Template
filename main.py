@@ -23,8 +23,11 @@ def log_in():
         return "Login attempt received"
     return render_template('log_in.html')
 
-
-
+#Sydney, Australia
+@app.route('/sydney.html', methods=['GET', 'POST'])
+def sydney():
+    data = dbHandler.listListing()
+    return render_template('/sydney.html', content=data)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

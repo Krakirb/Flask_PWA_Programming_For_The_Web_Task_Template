@@ -9,7 +9,6 @@
       <input type="text" name="q" placeholder="Search..." />
       <button type="submit">Search</button>
     </form>
-    <p>Search bar soon</p>
 </section>
 
 <div class="container">
@@ -17,14 +16,14 @@
 <div class="card">
   <img
     class="card-image"
-    src="{{row[6]}}"
+    src="{{row[5]}}"
     alt="Image of {{ row[1] }} not loaded."
   />
   <h1 class="card-name">{{ row[1] }}</h1>
   <p class="card-about">{{ row[3] }}</p>
-  <a class="card-link" href="{{row[2]}}"
-    ><button class="btn">Read More</button></a
-  >
+  <a class="btn card-link" href="sydney.html">
+  Read More
+</a>
 </div>
 {% endfor %}
 </div>

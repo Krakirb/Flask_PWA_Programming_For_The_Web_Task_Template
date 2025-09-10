@@ -1,0 +1,138 @@
+  
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sydney Experience Booking</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .product-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      background-color: #ffffff;
+      border: 4px solid #003135;       /* thick coloured border */
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* Image section */
+    .product-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Content section */
+    .product-info {
+      padding: 2rem;
+    }
+
+    .product-info h1 {
+      margin: 0 0 0.5rem;
+      color: #003135;
+    }
+
+    .product-info .location {
+      margin: 0 0 1rem;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    .product-info .price {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #001f24;
+      margin-bottom: 1.5rem;
+    }
+
+    .booking-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+    }
+
+    .booking-section label {
+      display: block;
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+
+    .booking-section input,
+    .booking-section select {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .booking-section button {
+      grid-column: span 2;
+      padding: 0.8rem;
+      background-color: #003135;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .booking-section button:hover {
+      background-color: #001f24;
+    }
+
+    @media (max-width: 600px) {
+      .booking-section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- You can edit the data-row attribute to match your listing row number -->
+  <div class="product-container" data-row="__ROW_NUMBER__">
+
+    <div class="product-image">
+      <img src="https://www.pelago.co/img/collections/sydney-opera-house/0527-0635_sydney-opera-house.jpg" alt="Sydney Destination">
+    </div>
+
+    <div class="product-info">
+      <h1>Sydney Harbour Bridge Climb</h1>
+      <p class="location">Sydney, Australia</p>
+      <p class="price">$299 per person</p>
+
+      <form class="booking-section" method="POST" action="/book">
+        <div>
+          <label for="date">Choose date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div>
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+          </select>
+        </div>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
